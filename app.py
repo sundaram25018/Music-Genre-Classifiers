@@ -100,20 +100,16 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Sidebar
-st.sidebar.title("🎛 Dashboard")
-app_mode = st.sidebar.selectbox("Select Page", ["Home", "About Project", "Genre Classification"])
+st.sidebar.title("🎵 Dashboard")
+app_mode = st.sidebar.selectbox("Go to", ["🏠 Home", "📂 About", "🎧 Prediction"])
 
 # Home Page
-if app_mode == "Home":
-    st.markdown("""
-            <h1 style='color:#facc15'>MelodyMind: Genre Predictor</h1>
-        </div>
-    """, unsafe_allow_html=True)
+if app_mode == "🏠 Home":
+    st.title("MelodyMind: Genre Predictor 🎶")
     st.image("bg.jpg", use_column_width=True)
     st.markdown("""
-        **Discover the power of AI in music analysis!**
-
-        ### How It Works
+    This app classifies music genres using deep learning. Upload an audio file, and the model will predict its genre using Mel Spectrograms and a trained CNN model.
+                 ### How It Works
         1. Upload Audio
         2. System analyzes audio and predicts genre
         3. See detailed results
@@ -123,11 +119,12 @@ if app_mode == "Home":
         - ⚡ **Fast** predictions
         - 🧠 **Smart** chunk-based classification
 
-        ### Try it now in the **Genre Classification** tab!
+    💡 **Tip**: Use high-quality MP3/WAV audio files of at least 10 seconds for best results.
     """)
 
-# About
-elif app_mode == "About Project":
+# About Page
+elif app_mode == "📂 About":
+    st.title("📂 About This Project")
     st.markdown("""
     ### About the Project
     A CNN-based music genre classifier built on the GTZAN dataset.
